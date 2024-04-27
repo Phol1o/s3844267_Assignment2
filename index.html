@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>
+            Max's Assignment 2
+        </title>
+
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        
+    </style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+
+    </head>
+    
+    <body style="background-color: rgb(255, 255, 255);">
+        
+        <div class="row">
+            
+            <div class="image-container"><img id="Bus" src="img/BusDark.png" onmouseover="this.src='img/BusLight.png';" onmouseout="this.src='img/BusDark.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="Car" src="img/CarDark.png" onmouseover="this.src='img/CarLight_1.png';" onmouseout="this.src='img/CarDark.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="Train" src="img/TrainDark.png" onmouseover="this.src='img/TrainLight.png';" onmouseout="this.src='img/TrainDark.png';" width="200" height="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="Bike" src="img/BikeDark.png" onmouseover="this.src='img/BikeLight.png';" onmouseout="this.src='img/BikeDark.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="Walk" src="img/WalkDark.png" onmouseover="this.src='img/WalkLight.png';" onmouseout="this.src='img/WalkDark.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="Motor" src="img/MotorDark.png" onmouseover="this.src='img/MotorLight.png';" onmouseout="this.src='img/MotorDark.png';" width="200" height="200"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="Heli" src="img/HeliDark.png" onmouseover="this.src='img/HeliLight.png';" onmouseout="this.src='img/HeliDark.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="Balloon" src="img/BalloonDark.png" onmouseover="this.src='img/BalloonLight.png';" onmouseout="this.src='img/BalloonDark.png';" width="200" height="200"/></div>
+            <div class="image-container"><img id="Plane" src="img/PlaneDark.png" onmouseover="this.src='img/PlaneLight.png';" onmouseout="this.src='img/PlaneDark.png';" width="200" height="200"/></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/aeroplanepass.wav");
+            var sound2 = new buzz.sound("sound/balloonfire.wav");
+            var sound3 = new buzz.sound("sound/bikewheel.wav");
+            var sound4 = new buzz.sound("sound/buspass.wav");
+            var sound5 = new buzz.sound("sound/carstart.wav");
+            var sound6 = new buzz.sound("sound/helicopterpass.wav");
+            var sound7 = new buzz.sound("sound/motorbike.wav");
+            var sound8 = new buzz.sound("sound/trainmoving.wav");
+            var sound9 = new buzz.sound("sound/walkgravel.wav");
+
+            window.onload = function() {
+                document.getElementById('Plane').addEventListener('click', function () {sound1.play();});
+                document.getElementById('Balloon').addEventListener('click', function () {sound2.play();});
+                document.getElementById('Bike').addEventListener('click', function () {sound3.play();});
+                document.getElementById('Bus').addEventListener('click', function () {sound4.play();});
+                document.getElementById('Car').addEventListener('click', function () {sound5.play();});
+                document.getElementById('Heli').addEventListener('click', function () {sound6.play();}); 
+                document.getElementById('Motor').addEventListener('click', function () {sound7.play();});
+                document.getElementById('Train').addEventListener('click', function () {sound8.play();});
+                document.getElementById('Walk').addEventListener('click', function () {sound9.play();});
+            };
+        </script>
+
+    </body>
+
+</html>
+
